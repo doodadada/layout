@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout01.html</title>
+    <style type="text/css">
+        .base{
+            position:relative;
+            width:100%;
+            border:3px dotted black;
+            height:500px;
+            top:100px;
+        }
+        .box1{
+            position:absolute;
+            width:50%;
+            height:500px;
+            background-color: yellow;
+            border:1px solid green;
+            top:0; left:0;
+            /* right:50% */
+        }
+        .box2{
+            position:absolute;
+            width:50%;
+            height:400px;
+            background-color: orange;
+            border:1px solid red;
+            right:5%;
+            /* left:45%; */
+            bottom:50px;
+            /* top:50px; */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>

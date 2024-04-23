@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 하나만 만들면 나머진 복붙,
+       - borer radius 50
+       - overflow hidden
+       - 가로 1100px 동그라미 가로세로 200px 씩
+        간격 100px
+       - 간격 맞추기 : 1)div 2)margin-right
+       3)absolute로 직접계산 100px(단 마지막 것은 없어야함) 
+        -세로 200
+        -segment 가로세로 200
+        -base하나에 컨텐츠와 text가 같이 들어간것 신경쓰기 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout04.html</title>
+    <style type="text/css">
+        .base{
+            position:relative;
+            width:100%;
+            height:200px;
+            border:1px dotted black;
+        }
+        .title{
+            position:relative;
+            width:400px;
+            height:100px;
+            margin:0 auto;
+            border:1px solid red;
+            font-size:2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height:100px;  
+        }
+        .text{
+            position:relative;
+            width:400px;
+            height:100px;
+            margin:0 auto;
+            border:1px solid red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+        .view{
+            position:relative;
+            width:1100px;
+            height:200px;
+            margin:0 auto;
+            border:1px solid red;
+        }
+        .image1{
+            position:absolute;
+            width:200px;
+            height:200px;
+            overflow:hidden;
+            border-radius:50%;
+            background-image:url(images/Koala.jpg);
+            background-size:130%;
+        }
+        .image2{
+            position:absolute;
+            width:200px;
+            height:200px;
+            overflow:hidden;
+            border-radius:50%;
+            background-image:url(images/Penguins.jpg);
+            background-size:130%;
+            left:300px;
+        }
+        .image3{
+            position:absolute;
+            width:200px;
+            height:200px;
+            overflow:hidden;
+            border-radius:50%;
+            background-image:url(images/Tulips.jpg);
+            background-size:130%;
+            left:600px;
+        }
+        .image4{
+            position:absolute;
+            width:200px;
+            height:200px;
+            overflow:hidden;
+            border-radius:50%;
+            background-image:url(images/Jellyfish.jpg);
+            background-size:130%;
+            left:900px;
+        }
+        .space{
+            position: relative;
+            height:200px;
+            width:100px;
+            float:left;
+        }
+        .segment{
+            border:1px solid blue;
+            width:200px;
+            height:200px;
+            float:left;
+            box-sizing:border-box;
+            
+        }
+        .segtitle{
+            width:200px;
+            height:80px;
+            background: blue;
+            color:white;
+            line-height: 80px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size:190%;
+            box-sizing:border-box;
+
+        }
+        .segtext{
+            width:200px;
+            height:120px;
+            background: white;
+            color:blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size:0.9em;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="base">
+        <div class="title">Content Title01  </div>
+        <div class="text">비상계엄하의 군사재판은 군인·군무원의 범죄나  군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로할 수 있다.</div>
+    </div>
+    <div class="base">
+        <div class="view">
+            <div class="image1"></div>
+            <div class="image2"></div>
+            <div class="image3"></div>
+            <div class="image4"></div>
+        </div>
+    </div>
+    <div class="base">
+        <div class="view">
+            <div class="segment">
+                <div class="segtitle">Segement</div>
+                <div class="segtext">비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로할 수 있다.</div>
+            </div>
+            <div class="space"></div>
+            <div class="segment">
+                <div class="segtitle">Segement</div>
+                <div class="segtext">비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로할 수 있다.</div>
+            </div>
+            <div class="space"></div>
+            <div class="segment">
+                <div class="segtitle">Segement</div>
+                <div class="segtext">비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로할 수 있다.</div>
+            </div>
+            <div class="space"></div>
+            <div class="segment">
+                <div class="segtitle">Segement</div>
+                <div class="segtext">비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로할 수 있다.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03.html</title>
+    <!-- top:0; left:0; 이름은 view로 -->
+    <!-- segment Title left 50 bottom 50 -->
+    <style type="text/css">
+        body{
+            margin:0;
+        }
+        .base1{
+            position:relative;
+            width:100%;
+            height:100px;
+            margin:0;
+            border:1px solid black;
+        }
+        .base2{
+            position:relative;
+            width:100%;
+            height:100px;
+            margin:0;
+            border:1px solid black;
+        }
+        .base3{
+            position:relative;
+            width:100%;
+            height:500px;
+            margin:0;
+            border:1px solid black;
+        }
+        #box1{
+            position:relative;
+            width:250px;
+            height:100px;
+            line-height: 130px;
+            border:1px solid red;
+            top:0; left:0;
+            margin:auto;
+            font-size:190%;
+            text-align: center;
+            line-height: 100px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight:bold;
+        }
+        #box2{
+            position:relative;
+            margin:auto;
+            height:100px;
+            width:400px;
+            border:1px solid blue;
+        }
+        #view{
+            position:relative;
+            width:1100px;
+            height:500px;
+            line-height: 100px;
+            border:1px solid red;
+            margin:auto;
+        }
+        #view1{
+            position:absolute;
+            height:80%;
+            width:80%;
+            background-color: red;
+        }
+        #view2{
+            position:absolute;
+            height:80%;
+            width:60%;
+            background-image:url(images/Penguins.jpg);
+            background-size:100%;
+            right:0;
+            bottom:0;
+        }
+        #view3{
+            position:absolute;
+            width:400px;
+            height:300px;
+            background-color: white;
+            left:50px;
+            bottom:50px;
+            border:1px solid blue;
+            box-shadow: 5px 5px 5px 5px black;
+            z-index:3;
+        }
+        #view3box1{
+            position:relative;
+            width:350px;
+            height:110px;
+            margin: 0 auto;
+            border:1px dashed blue;
+            font-size:190%;
+            text-align: center;
+            line-height: 110px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight:bold;
+            z-index:4;
+            background:white;
+        }#view3box2{
+            position:relative;
+            width:350px;
+            height:190px;
+            line-height: 1.5em; 
+            border:1px dashed blue;
+            margin: 0 auto;
+            background:white;
+            z-index:4;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="base1">
+        <div id="box1">Content Title</div>
+        <!-- content-tile line-height를 크게 하면 살짝 아래로 정렬 -->
+    </div>
+    <div class="base2">
+        <div id="box2">대한민국의 영토는 한반도와 그 부속도서로 한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 국무회의는 대통령/국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다</div>
+    </div>
+    <div class="base3">
+        <div id="view">
+            <div id="view1"></div>
+            <div id="view2"></div>
+            <div id="view3">
+                <div id="view3box1">Segment Title</div>
+                <div id="view3box2">대한민국의 영토는 한반도와 그 부속도서로 한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 국무회의는 대통령/국무총리와 15인 이상 30인 이하의 국무위원으로 구성한다.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
